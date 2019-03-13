@@ -42,6 +42,7 @@ Plug 'puppetlabs/puppet-syntax-vim'
 Plug 'wlangstroth/vim-racket'
 Plug 'vim-ruby/vim-ruby'
 Plug 'rust-lang/rust.vim'
+Plug 'vim-scripts/scribble.vim'
 
 " Wrangle Surrounding Pairs
 Plug 'jiangmiao/auto-pairs'

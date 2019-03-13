@@ -34,6 +34,7 @@ let g:LanguageClient_rootMarkers = {
 let g:LanguageClient_serverCommands = {
   \ 'go': ['/usr/bin/bingo'],
   \ 'python': ['/usr/bin/pyls'],
+  \ 'racket': ['/usr/bin/racket', '--lib', 'racket-language-server'],
   \ 'rust': ['/usr/bin/rustup', 'run', 'nightly', 'rls'],
   \ }
 
