@@ -36,6 +36,7 @@ Plug 'neomake/neomake'
 
 " Language Integrations
 Plug 'fatih/vim-go'
+Plug 'hylang/vim-hy'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'puppetlabs/puppet-syntax-vim'
 Plug 'wlangstroth/vim-racket'
