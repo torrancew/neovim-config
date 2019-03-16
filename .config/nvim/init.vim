@@ -39,7 +39,7 @@ let g:LanguageClient_serverCommands = {
   \ 'rust': ['/usr/bin/rustup', 'run', 'nightly', 'rls'],
   \ }
 
-call neomake#configure#automake('w')
+call neomake#configure#automake('rw')
 
 let g:UltiSnipsExpandTrigger       = '<C-j>'
 let g:UltiSnipsJumpForwardTrigger  = '<C-j>'
