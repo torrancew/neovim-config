@@ -2,7 +2,6 @@ source $XDG_CONFIG_HOME/nvim/plugins.vim
 
 colorscheme NeoSolarized
 
-set termguicolors
 set expandtab hidden number laststatus=2 softtabstop=2 shiftwidth=2 tabstop=2
 
 if has('conceal')
