@@ -34,6 +34,10 @@ Plug 'honza/vim-snippets'
 " Asynchronous Syntax Checker
 Plug 'neomake/neomake'
 
+" Clojure/JVM Integrations
+Plug 'tpope/vim-classpath'
+Plug 'tpope/vim-fireplace'
+
 " Language Integrations
 Plug 'fatih/vim-go'
 Plug 'hylang/vim-hy'
