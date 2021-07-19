@@ -1,4 +1,4 @@
-source $XDG_CONFIG_HOME/nvim/plugins.vim
+execute 'source' stdpath('config') . '/plugins.vim'
 
 colorscheme NeoSolarized
 
@@ -16,9 +16,9 @@ set wildignore+=*.swp,*.swo,*/.git/*,*/tmp/*,*/log/*
 
 let mapleader=','
 
-source $XDG_CONFIG_HOME/nvim/functions.vim
-source $XDG_CONFIG_HOME/nvim/commands.vim
-source $XDG_CONFIG_HOME/nvim/keymap.vim
+execute 'source' stdpath('config') . '/functions.vim'
+execute 'source' stdpath('config') . '/commands.vim'
+execute 'source' stdpath('config') . '/keymap.vim'
 
 let g:airline_powerline_fonts = 1
 
