@@ -7,8 +7,8 @@ endif
 
 call plug#begin(stdpath('data') . '/site/plug')
 
-" Solarized Colorscheme
-Plug 'iCyMind/NeoSolarized'
+" Selenized Colorscheme
+Plug 'jan-warchol/selenized', { 'rtp': 'editors/vim' }
 
 " Improved Status Line
 Plug 'vim-airline/vim-airline'

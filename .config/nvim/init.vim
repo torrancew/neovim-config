@@ -1,6 +1,8 @@
 execute 'source' stdpath('config') . '/plugins.vim'
 
-colorscheme NeoSolarized
+colorscheme selenized
+set termguicolors
+set bg=dark
 
 set expandtab hidden number laststatus=2 softtabstop=2 shiftwidth=2 tabstop=2
 
