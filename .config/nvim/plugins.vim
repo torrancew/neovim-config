@@ -38,6 +38,10 @@ Plug 'neomake/neomake'
 Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-fireplace'
 
+" Rust Integrations
+Plug 'rust-lang/rust.vim'
+Plug 'simrat39/rust-tools.nvim'
+
 " Language Integrations
 Plug 'fatih/vim-go'
 Plug 'hylang/vim-hy'
@@ -45,7 +49,6 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'puppetlabs/puppet-syntax-vim'
 Plug 'wlangstroth/vim-racket'
 Plug 'vim-ruby/vim-ruby'
-Plug 'rust-lang/rust.vim'
 Plug 'vim-scripts/scribble.vim'
 
 " Wrangle Surrounding Pairs
