@@ -4,6 +4,7 @@ colorscheme selenized
 set termguicolors
 set bg=dark
 
+set completeopt = "menuone,noselect"
 set expandtab hidden number laststatus=2 softtabstop=2 shiftwidth=2 tabstop=2
 
 if has('conceal')
@@ -22,23 +23,14 @@ execute 'source' stdpath('config') . '/functions.vim'
 execute 'source' stdpath('config') . '/commands.vim'
 execute 'source' stdpath('config') . '/keymap.vim'
 
-let g:airline_powerline_fonts = 1
+lua require('nvim-autopairs').setup()
+execute 'source' stdpath('config') . '/lsp_client.lua'
+execute 'source' stdpath('config') . '/auto_completion.lua'
 
-let g:deoplete#enable_at_startup = 1
+let g:airline_powerline_fonts = 1
 
 let g:hy_enable_conceal = 1
 let g:hy_conceal_fancy  = 1
-
-let g:LanguageClient_rootMarkers = {
-  \ 'go': ['.git', 'go.mod'],
-  \ }
-
-let g:LanguageClient_serverCommands = {
-  \ 'go': ['/usr/bin/bingo'],
-  \ 'python': ['/usr/bin/pyls'],
-  \ 'racket': ['/usr/bin/racket', '--lib', 'racket-language-server'],
-  \ 'rust': ['/usr/bin/rustup', 'run', 'nightly', 'rls'],
-  \ }
 
 call neomake#configure#automake('rw')
 

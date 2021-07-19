@@ -32,9 +32,3 @@ vmap <leader>tt :Tabularize /
 vmap <leader>t: :Tabularize /:/l0l1l0<CR>
 vmap <leader>t= :Tabularize /=/<CR>
 vmap <leader>t> :Tabularize /=>/<CR>
-
-" LanguageClient Key Mappings
-nnoremap          <F5> LanguageClient_contextMenu()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-nnoremap <silent> K    :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd   :call LanguageClient#textDocument_definition()<CR>

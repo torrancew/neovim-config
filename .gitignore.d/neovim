@@ -3,5 +3,6 @@
 !/.gitignore.d/neovim
 !/.config
 !/.config/nvim
+!/.config/nvim/*.lua
 !/.config/nvim/*.vim
 !/.config/nvim/*.nvim

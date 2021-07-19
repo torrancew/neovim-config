@@ -15,7 +15,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Language Server Protocol Support
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'neovim/nvim-lspconfig'
 
 " Fuzzy Finder
 Plug 'junegunn/fzf'
@@ -25,7 +25,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-grepper'
 
 " Completion Framework
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'hrsh7th/nvim-compe'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -49,9 +49,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'vim-scripts/scribble.vim'
 
 " Wrangle Surrounding Pairs
-Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 Plug 'luochen1990/rainbow'
-Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
