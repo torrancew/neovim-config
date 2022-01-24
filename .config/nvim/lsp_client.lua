@@ -27,9 +27,18 @@ local on_attach = function(client, bufno)
   buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
-require('rust-tools').setup({server = {on_attach = on_attach}})
+require('rust-tools').setup({server = {
+  on_attach = on_attach,
+  settings = {
+    ['rust-analyzer'] = {
+      ['checkOnSave'] = {
+        command = 'clippy',
+      }
+    }
+  }
+}})
 
-local servers = {'gopls'}
+local servers = {'clangd', 'gopls', 'pylsp'}
 for _, srv in ipairs(servers) do
   lsp[srv].setup {
     on_attach = on_attach,

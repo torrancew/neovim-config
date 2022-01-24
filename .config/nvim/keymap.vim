@@ -32,3 +32,6 @@ vmap <leader>tt :Tabularize /
 vmap <leader>t: :Tabularize /:/l0l1l0<CR>
 vmap <leader>t= :Tabularize /=/<CR>
 vmap <leader>t> :Tabularize /=>/<CR>
+
+" Terminal Mode
+tnoremap <Esc> <C-\><C-n>

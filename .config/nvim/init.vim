@@ -54,3 +54,10 @@ call ale#linter#Define('pandoc', {
 \   'command': 'vale --output=JSON %t',
 \   'callback': 'ale#handlers#vale#Handle',
 \})
+
+au FocusGained,BufEnter,BufWinEnter term://* nmap <buffer> <C-d> <cmd>bdelete!<CR>
+au BufNew,BufEnter *.rs nmap <leader>d <cmd>RustDebuggables<CR>
+au BufNew,BufEnter *.rs nmap <leader>r <cmd>RustRunnables<CR>
+au BufNew,BufEnter *.rs nmap <leader>t <cmd>RustTest<CR>
+au BufNew,BufEnter *.rs nmap <leader>T <cmd>RustTest!<CR>
+au BufNew,BufEnter *.md setlocal spell spelllang=en
