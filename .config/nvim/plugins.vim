@@ -18,8 +18,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neovim/nvim-lspconfig'
 
 " Fuzzy Finder
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " Improved Grepping
 Plug 'mhinz/vim-grepper'

@@ -11,12 +11,12 @@ nmap <C-Tab> :retab!<CR>
 nmap <leader>$ :PreserveCursor "%s/\\s\\+$//e"<CR>
 
 " Fuzzy Finder
-nmap <C-p>      :Files<CR>
-nmap <leader>fb :Buffers<CR>
-nmap <leader>ff :Files<CR>
-nmap <leader>fg :GFiles<CR>
-nmap <leader>fs :Snippets<CR>
-nmap <leader>ft :Tags<CR>
+nmap <C-p>      <cmd>Telescope<CR>
+nmap <leader>fb <cmd>Telescope buffers<CR>
+nmap <leader>ff <cmd>Telescope find_files<CR>
+nmap <leader>fg <cmd>Telescope git_files<CR>
+nmap <leader>fs <cmd>Snippets<CR>
+nmap <leader>ft <cmd>Telescope help_tags<CR>
 
 " Toggle Non-Printable Characters
 nmap <leader>l :set llist!<CR>

@@ -26,6 +26,7 @@ execute 'source' stdpath('config') . '/commands.vim'
 execute 'source' stdpath('config') . '/keymap.vim'
 
 lua require('nvim-autopairs').setup()
+execute 'source' stdpath('config') . '/telescope.lua'
 execute 'source' stdpath('config') . '/lsp_client.lua'
 execute 'source' stdpath('config') . '/auto_completion.lua'
 
