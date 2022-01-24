@@ -1,3 +1,5 @@
+nnoremap <C-l> <Cmd>nohls<CR><C-l>
+
 " Copy/Cut/Paste
 nmap <leader>p "+p
 nmap <leader>P "+P

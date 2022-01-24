@@ -6,6 +6,8 @@ colorscheme selenized
 set termguicolors
 set bg=dark
 
+set mouse=nv
+
 set completeopt = "menuone,noselect"
 set expandtab hidden number laststatus=2 softtabstop=2 shiftwidth=2 tabstop=2
 
