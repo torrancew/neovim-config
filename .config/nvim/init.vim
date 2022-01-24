@@ -1,3 +1,5 @@
+let g:ale_disable_lsp = 1
+
 execute 'source' stdpath('config') . '/plugins.vim'
 
 colorscheme selenized
@@ -32,8 +34,6 @@ let g:airline_powerline_fonts = 1
 let g:hy_enable_conceal = 1
 let g:hy_conceal_fancy  = 1
 
-call neomake#configure#automake('rw')
-
 let g:UltiSnipsExpandTrigger       = '<C-j>'
 let g:UltiSnipsJumpForwardTrigger  = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
@@ -46,3 +46,10 @@ let g:rainbow_active = 1
 
 let g:rustfmt_autosave = 1
 let g:rust_clip_command = 'xclip -selection clipboard'
+
+call ale#linter#Define('pandoc', {
+\   'name': 'vale',
+\   'executable': 'vale',
+\   'command': 'vale --output=JSON %t',
+\   'callback': 'ale#handlers#vale#Handle',
+\})

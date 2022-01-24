@@ -31,8 +31,8 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-" Asynchronous Syntax Checker
-Plug 'neomake/neomake'
+" Asynchronous Linter
+Plug 'dense-analysis/ale'
 
 " Clojure/JVM Integrations
 Plug 'tpope/vim-classpath'
