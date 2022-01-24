@@ -84,4 +84,7 @@ Plug 'vim-pandoc/vim-pandoc'
 " vim-devicons extends other plugins, and should load last
 Plug 'ryanoasis/vim-devicons'
 
+" Personal Wiki
+Plug 'vimwiki/vimwiki'
+
 call plug#end()

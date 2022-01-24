@@ -50,6 +50,14 @@ let g:rainbow_active = 1
 let g:rustfmt_autosave = 1
 let g:rust_clip_command = 'xclip -selection clipboard'
 
+let g:vimwiki_global_ext = 0
+let g:vimwiki_list = [{'path': '~/share/annex/vimw/wiki',
+                     \ 'path_html': '~/share/annex/vimw/public',
+                     \ 'template_path': '~/share/annex/vimw/templates',
+                     \ 'css_name': 'css/style.css',
+                     \ 'syntax': 'markdown', 'ext': '.wiki',
+                     \ 'custom_wiki2html': 'vimwiki2html'}]
+
 call ale#linter#Define('pandoc', {
 \   'name': 'vale',
 \   'executable': 'vale',
