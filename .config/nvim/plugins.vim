@@ -17,6 +17,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Language Server Protocol Support
 Plug 'neovim/nvim-lspconfig'
 
+" Debugger Integration
+Plug 'mfussenegger/nvim-dap'
+
 " Fuzzy Finder
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
