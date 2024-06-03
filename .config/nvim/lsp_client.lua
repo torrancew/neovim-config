@@ -27,12 +27,20 @@ local on_attach = function(client, bufno)
   buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
+-- Set up lspconfig.
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 require('rust-tools').setup({server = {
+  cmd = { vim.fn.expand("$HOME/bin/rust-analyzer") },
   on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
     ['rust-analyzer'] = {
       ['checkOnSave'] = {
         command = 'clippy',
+      },
+      ['buildScripts'] = {
+        enable = true,
       }
     }
   }
@@ -42,6 +50,7 @@ local servers = {'clangd', 'gopls', 'pylsp'}
 for _, srv in ipairs(servers) do
   lsp[srv].setup {
     on_attach = on_attach,
+    capabilities = capabilities,
     flags = {
       debounce_text_changes = 150,
     }

@@ -24,16 +24,24 @@ nmap <leader>ft <cmd>Telescope help_tags<CR>
 nmap <leader>l :set llist!<CR>
 
 " Toggle Location List & QuickFix
-nmap <leader>ll :lopen<CR>
-nmap <leader>lc :lclose<CR>
-nmap <leader>qf :copen<CR>
-nmap <leader>qc :cclose<CR>
+nmap <leader>, <Plug>(qf_qf_toggle_stay)
+nmap <leader>. <Plug>(qf_loc_toggle_stay)
+"nmap <leader>ll :lopen<CR>
+"nmap <leader>lc :lclose<CR>
+"nmap <leader>qf :copen<CR>
+"nmap <leader>qc :cclose<CR>
 
 " Tabularize Key Mappings
 vmap <leader>tt :Tabularize /
-vmap <leader>t: :Tabularize /:/l0l1l0<CR>
+vmap <leader>t: :Tabularize /:/<CR>
 vmap <leader>t= :Tabularize /=/<CR>
 vmap <leader>t> :Tabularize /=>/<CR>
 
 " Terminal Mode
-tnoremap <Esc> <C-\><C-n>
+"nnoremap <leader>s :bot sp \| term<CR>
+"tnoremap <Esc> <C-\><C-n>
+nnoremap <leader>s :bot 24sp \| term <CR>
+tnoremap <expr> <Esc> &ft == 'fzf' ? '<Esc>' : '<C-\><C-n>'
+tnoremap <C-d> <C-\><C-n>:bd!<CR>
+
+autocmd FileType rust nnoremap <buffer> <F5> :Cargo run<CR>

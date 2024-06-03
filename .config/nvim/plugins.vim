@@ -8,7 +8,7 @@ endif
 call plug#begin(stdpath('data') . '/site/plug')
 
 " Selenized Colorscheme
-Plug 'jan-warchol/selenized', { 'rtp': 'editors/vim' }
+Plug 'jan-warchol/selenized', {'rtp': 'editors/vim'}
 
 " Improved Status Line
 Plug 'vim-airline/vim-airline'
@@ -20,6 +20,9 @@ Plug 'neovim/nvim-lspconfig'
 " Debugger Integration
 Plug 'mfussenegger/nvim-dap'
 
+" TreeSitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " Fuzzy Finder
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -30,11 +33,18 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'mhinz/vim-grepper'
 
 " Completion Framework
-Plug 'hrsh7th/nvim-compe'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" QuickFix/LocationList Improvements
+Plug 'romainl/vim-qf'
 
 " Snippets
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 " Asynchronous Linter
 Plug 'dense-analysis/ale'
@@ -81,6 +91,9 @@ Plug 'fmoralesc/vim-pad', { 'branch': 'devel' }
 " TMux Integration
 Plug 'edkolev/tmuxline.vim'
 
+" OpenSCAD Integration
+Plug 'salkin-mada/openscad.nvim'
+
 " PanDoc Integration
 Plug 'vim-pandoc/vim-pandoc'
 
@@ -89,5 +102,8 @@ Plug 'ryanoasis/vim-devicons'
 
 " Personal Wiki
 Plug 'vimwiki/vimwiki'
+
+" eww config
+Plug 'elkowar/yuck.vim'
 
 call plug#end()

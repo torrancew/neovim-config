@@ -23,14 +23,18 @@ set wildignore+=*.swp,*.swo,*/.git/*,*/tmp/*,*/log/*
 
 let mapleader=','
 
+lua require('openscad')
+lua vim.g.openscad_default_mappings = true
+
 execute 'source' stdpath('config') . '/functions.vim'
 execute 'source' stdpath('config') . '/commands.vim'
 execute 'source' stdpath('config') . '/keymap.vim'
 
 lua require('nvim-autopairs').setup()
 execute 'source' stdpath('config') . '/telescope.lua'
-execute 'source' stdpath('config') . '/lsp_client.lua'
+execute 'source' stdpath('config') . '/treesitter.lua'
 execute 'source' stdpath('config') . '/auto_completion.lua'
+execute 'source' stdpath('config') . '/lsp_client.lua'
 
 let g:airline_powerline_fonts = 1
 
@@ -71,3 +75,5 @@ au BufNew,BufEnter *.rs nmap <leader>r <cmd>RustRunnables<CR>
 au BufNew,BufEnter *.rs nmap <leader>t <cmd>RustTest<CR>
 au BufNew,BufEnter *.rs nmap <leader>T <cmd>RustTest!<CR>
 au BufNew,BufEnter *.md setlocal spell spelllang=en
+
+colorscheme selenized
