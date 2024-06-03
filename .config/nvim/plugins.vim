@@ -65,6 +65,10 @@ Plug 'puppetlabs/puppet-syntax-vim'
 Plug 'wlangstroth/vim-racket'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/scribble.vim'
+Plug 'hashivim/vim-terraform'
+Plug 'vala-lang/vala.vim'
+
+Plug 'lotabout/skim.vim'
 
 " Wrangle Surrounding Pairs
 Plug 'windwp/nvim-autopairs'
