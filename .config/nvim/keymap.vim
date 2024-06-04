@@ -41,7 +41,8 @@ vmap <leader>t> :Tabularize /=>/<CR>
 "nnoremap <leader>s :bot sp \| term<CR>
 "tnoremap <Esc> <C-\><C-n>
 nnoremap <leader>s :bot 24sp \| term <CR>
-tnoremap <expr> <Esc> &ft == 'fzf' ? '<Esc>' : '<C-\><C-n>'
+"tnoremap <expr> <Esc> &ft == 'fzf' ? '<Esc>' : '<C-\><C-n>'
+tnoremap <expr> <Esc> IsFzf() ? '<Esc>' : '<C-\><C-n>'
 tnoremap <C-d> <C-\><C-n>:bd!<CR>
 
 autocmd FileType rust nnoremap <buffer> <F5> :Cargo run<CR>

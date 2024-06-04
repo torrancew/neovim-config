@@ -1,3 +1,7 @@
+function! IsFzf()
+  return &ft == 'fzf' || &ft == 'skim'
+endfunction
+
 " Execute provided VimScript and preserve cursor position
 function! PreserveCursor(code)
   " Save last search and cursor position
