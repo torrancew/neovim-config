@@ -6,3 +6,8 @@
 !/.config/nvim/*.lua
 !/.config/nvim/*.vim
 !/.config/nvim/*.nvim
+!/.config/nvim/lua
+!/.config/nvim/lua/config
+!/.config/nvim/lua/config/*.lua
+!/.config/nvim/lua/plugins
+!/.config/nvim/lua/plugins/*.lua
