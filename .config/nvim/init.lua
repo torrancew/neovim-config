@@ -1,6 +1,7 @@
 require("config.lazy")
 require("config.options")
 
+vim.opt.termguicolors = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
@@ -8,6 +9,8 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.cmd.colorscheme 'nightfox'
 vim.keymap.set('n', '<localleader>ff', ':Telescope find_files<CR>', {silent=true})
+
+vim.notify = require('notify')
 
 vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
 vim.opt.shortmess = vim.opt.shortmess + { c = true }

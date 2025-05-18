@@ -30,17 +30,7 @@ return {
     end,
     dependencies = {
       { 'mfussenegger/nvim-dap' },
-      {
-        'simrat39/rust-tools.nvim',
-        opts = {
-          server = {
-            on_attach = function(_, bufnr)
-              vim.keymap.set("n", "<C-space>", rt.hover_action.hover_actions, { buffer = bufnr })
-              vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-            end,
-          },
-        },
-      },
+      { 'mrcjkb/rustaceanvim' },
       {
         'williamboman/mason-lspconfig.nvim',
         opts = {
