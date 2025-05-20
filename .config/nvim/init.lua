@@ -22,6 +22,13 @@ let g:rustfmt_autosave = 1
 set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 
+" Meta
+nmap <localleader>ht :Hardtime toggle<CR>
+nmap <localleader>G  :Neogit<CR>
+nmap <localleader>L  :Lazy<CR>
+nmap <localleader>M  :Mason<CR>
+nmap <localleader>T  :Neotest output<CR>
+
 " Expand
 imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
