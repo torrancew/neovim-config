@@ -19,6 +19,7 @@ vim.api.nvim_set_option('updatetime', 300)
 vim.cmd([[
 let g:rustfmt_autosave = 1
 
+set nu
 set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 
