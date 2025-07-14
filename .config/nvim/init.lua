@@ -30,6 +30,9 @@ nmap <localleader>L  :Lazy<CR>
 nmap <localleader>M  :Mason<CR>
 nmap <localleader>T  :Neotest output<CR>
 
+" Terminal mode
+tnoremap <Esc> <C-\><C-n>
+
 " Expand
 imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
@@ -75,6 +78,23 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end
     vim.lsp.buf.format({async = false})
   end
+})
+
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function (args)
+        local keymap = vim.keymap
+        local lsp = vim.lsp
+	    local bufopts = { noremap = true, silent = true }
+
+        keymap.set("n", "gr", lsp.buf.references, bufopts)
+        keymap.set("n", "gd", lsp.buf.definition, bufopts)
+        keymap.set("n", "<space>rn", lsp.buf.rename, bufopts)
+        keymap.set("n", "<space>ca", lsp.buf.code_action, bufopts)
+        keymap.set("n", "K", lsp.buf.hover, bufopts)
+        keymap.set("n", "<space>f", function()
+            require("conform").format({ async = true, lsp_fallback = true })
+        end, bufopts)
+    end
 })
 
 require("neotest").setup({

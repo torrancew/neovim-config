@@ -32,6 +32,17 @@ return {
       { 'mfussenegger/nvim-dap' },
       { 'mrcjkb/rustaceanvim' },
       {
+        'saecki/crates.nvim',
+        opts = {
+          lsp = {
+            enabled = true,
+            actions = true,
+            completion = true,
+            hover = true,
+          },
+        },
+      },
+      {
         'williamboman/mason-lspconfig.nvim',
         opts = {
           automatic_installation = true,
@@ -40,7 +51,11 @@ return {
           'williamboman/mason.nvim',
           opts = {
             ui = {
-              icons = { package_installed = "✓", package_pending = "➜", package_uninstalled = "✗" },
+              icons = {
+                package_installed   = "✓",
+                package_pending     = "➜",
+                package_uninstalled = "✗",
+              },
             },
           },
         },
