@@ -43,6 +43,15 @@ return {
         },
       },
       {
+        "mrxiaozhuox/dioxus.nvim",
+        opts = {
+          format = {
+            split_line_attributes = true,
+          },
+        },
+        ft = "rust",
+      },
+      {
         'williamboman/mason-lspconfig.nvim',
         opts = {
           automatic_installation = true,
