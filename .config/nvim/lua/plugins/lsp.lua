@@ -8,16 +8,15 @@ return {
         "asm_lsp", "clangd", "gopls",
         "openscad_lsp", "tinymist", "vale_ls"
       }) do
-        require('lspconfig')[lsp].setup {
+        vim.lsp.config(lsp, {
           capabilities = caps,
-        }
+        })
       end
 
       -- Use Ruff for linting, formatting and import sorting
       -- and Pyright for other LSP features
-      require('lspconfig').ruff.setup {
-      }
-      require('lspconfig').pyright.setup {
+      vim.lsp.enable('ruff')
+      vim.lsp.config('pyright', {
         settings = {
           pyright = {
             disableOrganizeImports = true,
@@ -26,7 +25,7 @@ return {
             analysis = { ignore = { '*' } },
           }
         },
-      }
+      })
     end,
     dependencies = {
       { 'mfussenegger/nvim-dap' },
