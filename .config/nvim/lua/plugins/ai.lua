@@ -3,26 +3,7 @@ return {
     'yetone/avante.nvim',
     build = 'make',
     event = 'VeryLazy',
-    keys = {
-      {
-        '<leader>a+',
-        function()
-          local tree_ext = require('avante.extensions.nvim_tree')
-          tree_ext.add_file()
-        end,
-        desc = 'Select file in NvimTree',
-        ft = 'NvimTree',
-      },
-      {
-        '<leader>a-',
-        function()
-          local tree_ext = require('avante.extensions.nvim_tree')
-          tree_ext.remove_file()
-        end,
-        desc = 'Deselect file in NvimTree',
-        ft = 'NvimTree',
-      },
-    },
+    keys = { },
     version = false,
     -- @module 'avante'
     -- @type avante.Config
@@ -30,10 +11,17 @@ return {
       instructions_files = "CONTEXT.md",
       behavior = { enable_fastapply = true },
       selector = { exclude_auto_select = { 'NvimTree' } },
-      provider = 'gemini',
+      provider = 'claude',
       providers = {
-        gemini = {
-          model = 'gemini-2.5-pro',
+        claude = {},
+        gemini = { model = 'gemini-2.5-pro' },
+        openai = {},
+        vertex = { model = 'gemini-2.5-pro' },
+        vertexai = {
+          __inherited_from = 'vertex',
+          endpoint = 'https://openrouter.ai/api/v1',
+          api_key_name = 'OPENROUTER_API_KEY',
+          model = 'deepseek/deepseek-r1',
         }
       },
     },
@@ -73,5 +61,13 @@ return {
         ft = { 'markdown', 'Avante' },
       },
     },
-  }
+  },
+  {
+    'ravitemer/mcphub.nvim',
+    -- build = 'npm install -g mcp-hub@latest',  -- Installs `mcp-hub` node binary globally
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+        require('mcphub').setup()
+    end
+  },
 }
