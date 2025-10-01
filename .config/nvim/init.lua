@@ -50,8 +50,10 @@ imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-T
 smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 
 " Terraform
-nmap <leader>tfi :!terraform init<CR>
-nmap <leader>tfp :!terraform plan<CR>
+nmap <leader>tfe :TerraformExplore<CR>
+nmap <leader>tfi :TerraformInit<CR>
+nmap <leader>tfp :TerraformPlan<CR>
+nmap <leader>tfv :TerraformValidate<CR>
 
 " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
 " See https://github.com/hrsh7th/vim-vsnip/pull/50
