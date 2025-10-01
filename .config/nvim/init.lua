@@ -18,6 +18,8 @@ vim.api.nvim_set_option('updatetime', 300)
 
 vim.cmd([[
 let g:rustfmt_autosave = 1
+let g:terraform_align = 1
+let g:terraform_fmt_on_save = 1
 
 set nu
 set signcolumn=yes
@@ -46,6 +48,10 @@ imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab
 smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
 imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+
+" Terraform
+nmap <leader>tfi :!terraform init<CR>
+nmap <leader>tfp :!terraform plan<CR>
 
 " Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
 " See https://github.com/hrsh7th/vim-vsnip/pull/50
