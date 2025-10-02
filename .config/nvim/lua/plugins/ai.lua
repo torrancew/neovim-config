@@ -1,6 +1,7 @@
 return {
   {
-    'yetone/avante.nvim',
+    'torrancew/avante.nvim',
+    branch = 'fix/vertex-project-from-env',
     build = 'make',
     event = 'VeryLazy',
     keys = { },
